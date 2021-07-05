@@ -1,6 +1,9 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+import { Link, useLocation } from "react-router-dom";
 
 function Header () {
+    const location = useLocation();
+    
     return (
         <Container>
             <Info>
@@ -8,6 +11,9 @@ function Header () {
                     Meh and Mus DeFi Project
                 </Name>
             </Info>
+            <Tab to="/home" active={location.pathname === "/home" ? true : false}>Home</Tab>
+            <Tab to="/products" active={location.pathname === "/products" ? true : false}>Products</Tab>
+            <Tab to="/about" active={location.pathname === "/about" ? true : false}>About</Tab>
         </Container>
     );
 }
@@ -33,4 +39,19 @@ const Name = styled.div`
     font-weight: 500;
 `;
 
+const Tab = styled(Link)`
+    font-size: 14px;    
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    width: 100px;
+    align-items: center;
+    color: #ffffff;
+    ${({ active }) =>
+        active &&
+        css`
+        color: #fefe;
+    `}
+`
 export default Header;

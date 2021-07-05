@@ -6,6 +6,8 @@ import Header from './components/Header';
 
 // Import pages here
 import Home from './pages/Home';
+import Products from './pages/Products';
+import About from './pages/About';
 
 function App () {
   return (
@@ -14,6 +16,8 @@ function App () {
         <Header />
         <Switch>
           <Route path ="/home" component={Home} />
+          <Route path ="/products" component={Products} />
+          <Route path ="/about" component={About} />
         </Switch>
       </Router>
     </Container>
@@ -23,6 +27,9 @@ function App () {
 const Container = styled.div`
   background: #000000;
   position: relative;
+  height: 100%;
+  width: 100%;
+  padding: 0px 0px 100px 0px;
 `;
 
 export default App;
