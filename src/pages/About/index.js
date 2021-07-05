@@ -1,17 +1,17 @@
 import styled from 'styled-components';
 
-function Home () {
+function About () {
     return(
         <Container>
             <HeaderText>
-                Home
+                About
             </HeaderText>
         </Container>
     )
 }
 
 const Container = styled.div`
-    padding: 50px 0px 100px 0px;    
+    padding: 50px 0px 100px 0px;
     align-items: center;
     display: flex;
     flex: 1;
@@ -26,4 +26,4 @@ const HeaderText = styled.div`
     font-weight: 500;
 `
 
-export default Home;
+export default About;
