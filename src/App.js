@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 // Import components here
 import Header from './components/Header';
+import Banner from './components/Banner';
 
 // Import pages here
 import Home from './pages/Home';
@@ -14,6 +15,7 @@ function App () {
     <Container>
       <Router>
         <Header />
+        <Banner />
         <Switch>
           <Route path ="/home" component={Home} />
           <Route path ="/products" component={Products} />
