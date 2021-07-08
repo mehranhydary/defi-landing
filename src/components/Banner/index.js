@@ -60,7 +60,7 @@ const BannerXButton = styled.button`
     font-style: normal;
     font-variant-caps: normal;
     font-weight: 400;
-    height: auto;
+    //height: auto;
     letter-spacing: normal;
     line-height: normal;
     opacity: 0.8;
