@@ -3,6 +3,10 @@ import styled from 'styled-components';
 
 // Import components here
 import Header from './components/Header';
+import Banner from './components/Banner';
+import Card from './components/Card';
+import Tile from './components/Tile';
+import Panel from './components/Panel';
 
 // Import pages here
 import Home from './pages/Home';
@@ -13,7 +17,11 @@ function App () {
   return (
     <Container>
       <Router>
+      <Banner />
         <Header />
+        <Panel />
+        <Card />
+        <Tile />
         <Switch>
           <Route path ="/home" component={Home} />
           <Route path ="/products" component={Products} />
@@ -25,7 +33,6 @@ function App () {
 }
 
 const Container = styled.div`
-  background: #000000;
   position: relative;
   height: 100%;
   width: 100%;
